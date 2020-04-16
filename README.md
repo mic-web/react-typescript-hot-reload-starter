@@ -1,4 +1,5 @@
 # ToDos
+
 - [x] React
 - [x] Typescript
 - [x] Remove dependency in index.html
@@ -8,5 +9,6 @@
 - [x] Eslint - prettier, react, typescript, hooks
 - [x] Merge webpack configs
 - [ ] Jest
-- [ ] Material ui
+- [x] Material ui
 - [ ] React hooks- basic setup makes sense?
+- [ ] React Router

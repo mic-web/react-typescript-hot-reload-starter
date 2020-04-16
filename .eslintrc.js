@@ -1,39 +1,57 @@
 module.exports = {
-  root: true,
-  plugins: ['@typescript-eslint', 'jest', 'react', 'react-hooks'],
-  parser: '@typescript-eslint/parser',
+  env: {
+    browser: true,
+    es6: true,
+  },
   extends: [
-    // 'airbnb',
-    'eslint:recommended',
     'plugin:react/recommended',
+    'airbnb',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
     'prettier/@typescript-eslint',
+    'plugin:prettier/recommended',
   ],
-  rules: {
-    'no-param-reassign': 0,
-    'no-underscore-dangle': 0,
-    'consistent-return': 0,
-    'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'warn',
+  globals: {
+    Atomics: 'readonly',
+    SharedArrayBuffer: 'readonly',
   },
-  env: {
-    browser: true,
-    amd: true,
-    node: true,
-    es6: true,
-  },
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
     },
+    ecmaVersion: 2018,
+    sourceType: 'module',
   },
   settings: {
-    react: {
-      createClass: 'createReactClass', // Regex for Component Factory to use,
-      // default to "createReactClass"
-      pragma: 'React', // Pragma to use, default to "React"
-      version: 'detect', // React version. "detect" automatically picks the version you have installed.
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
     },
   },
+  plugins: ['react', '@typescript-eslint', 'prettier'],
+  rules: {
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
+      },
+    ],
+    'prettier/prettier': 'error',
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
+  },
+  "overrides": [
+    {
+      "files": ["*.js", "*.jsx"],
+      "rules": {
+        "@typescript-eslint/no-var-requires": "off"
+      }
+    }
+]
 }

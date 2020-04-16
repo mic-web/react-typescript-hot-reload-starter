@@ -1,5 +1,6 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
   mode: 'production',
@@ -9,7 +10,6 @@ module.exports = {
     filename: '[name].js',
     path: path.resolve(__dirname, '../dist'),
   },
-  target: 'web',
   devtool: 'source-map',
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
@@ -17,9 +17,9 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.ts(x?)$/,
+        test: /\.(ts|js)x?$/,
         exclude: /node_modules/,
-        use: 'ts-loader',
+        loader: 'babel-loader',
       },
       {
         enforce: 'pre',
@@ -32,5 +32,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './index.html',
     }),
+
+    new CleanWebpackPlugin(),
   ],
 }

@@ -1,10 +1,12 @@
 # ToDos
-- [x] react
-- [x] typescript
-- [x] remove dependency in index.html
-- [ ] webpack dev server
-- [ ] hot module replacement
-- [x] prettier
-- [x] eslint - prettier, react, typescript, hooks
+- [x] React
+- [x] Typescript
+- [x] Remove dependency in index.html
+- [x] Webpack dev server
+- [x] Hot module replacement
+- [x] Prettier
+- [x] Eslint - prettier, react, typescript, hooks
+- [x] Merge webpack configs
 - [ ] Jest
-- [ ] react hooks- basic setup makes sense?
+- [ ] Material ui
+- [ ] React hooks- basic setup makes sense?

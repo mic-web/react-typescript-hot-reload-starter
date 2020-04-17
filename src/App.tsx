@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Box, CssBaseline } from '@material-ui/core'
 import { createMuiTheme, makeStyles, ThemeProvider } from '@material-ui/core/styles'
-import { cyan } from '@material-ui/core/colors'
+import { teal } from '@material-ui/core/colors'
 
 import Header from './Header'
 import List from './List'
@@ -13,7 +13,7 @@ const theme = createMuiTheme({
   spacing,
   palette: {
     primary: {
-      main: cyan[800],
+      main: teal[600],
     },
   },
   overrides: {

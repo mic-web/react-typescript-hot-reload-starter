@@ -1,4 +1,4 @@
-# Typescript | React | MaterialUI | HMR | Prettier Lint - Starter
+# Starter kit: Typescript | React | MaterialUI | HMR | Prettier | ESLINT
 
 Customizable, transparent starter for rapid and relaxed development.
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import { AppBar, Box, Toolbar, Typography } from '@material-ui/core'
-import { BeachAccess, Pool, WbSunny } from '@material-ui/icons'
+import { BeachAccess, WbSunny } from '@material-ui/icons'
 
 export default function ButtonAppBar() {
   return (
@@ -9,9 +9,8 @@ export default function ButtonAppBar() {
         <Box mr={1}>
           <WbSunny />
           <BeachAccess />
-          <Pool />
         </Box>
-        <Typography variant="h6">Highly Customizable React Project</Typography>
+        <Typography variant="h5">Customizable, Transparent Starter Kit</Typography>
       </Toolbar>
     </AppBar>
   )

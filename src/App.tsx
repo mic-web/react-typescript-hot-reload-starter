@@ -1,20 +1,27 @@
 import React from 'react'
 
-import CssBaseline from '@material-ui/core/CssBaseline'
-import { Box, Card, Typography } from '@material-ui/core'
+import { Box, CssBaseline } from '@material-ui/core'
 import { createMuiTheme, makeStyles, ThemeProvider } from '@material-ui/core/styles'
-import { teal } from '@material-ui/core/colors'
-import 'typeface-roboto'
+import { cyan } from '@material-ui/core/colors'
 
 import Header from './Header'
+import List from './List'
+
+const spacing = 8
 
 const theme = createMuiTheme({
-  overrides: {},
+  spacing,
   palette: {
     primary: {
-      main: teal[300],
+      main: cyan[800],
     },
-    background: {},
+  },
+  overrides: {
+    MuiCardActions: {
+      root: {
+        padding: spacing * 2,
+      },
+    },
   },
 })
 
@@ -34,13 +41,7 @@ const App: React.SFC = () => {
       <ThemeProvider theme={theme}>
         <Header />
         <Box m={2}>
-          <Card>
-            <Box m={2}>
-              <Typography variant="subtitle1">
-                Simple, modern starter project using Typescript, React and MaterialUI
-              </Typography>
-            </Box>
-          </Card>
+          <List />
         </Box>
       </ThemeProvider>
     </div>

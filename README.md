@@ -1,14 +1,23 @@
-# ToDos
+# Used languages and frameworks
 
-- [x] React
-- [x] Typescript
-- [x] Remove dependency in index.html
-- [x] Webpack dev server
-- [x] Hot module replacement
-- [x] Prettier
-- [x] Eslint - prettier, react, typescript, hooks
-- [x] Merge webpack configs
-- [ ] Jest
-- [x] Material ui
-- [ ] React hooks- basic setup makes sense?
-- [ ] React Router
+- Typescript
+- React
+- MaterialUI
+- Jest
+- Enzyme
+
+# Used tools
+
+- Webpack
+- Babel
+- Hot Module Replacement (HMR)
+- Prettier
+- ESLint
+
+# Purpose
+
+This project shall serve as a simple starter project which provides full customizability. It's an
+alternative to bootstrappers like the create-react-app, if you desire more flexibility and
+transparency.
+The setup is minimal and completely customizable, but still includes everything you need to get really
+productive quickly.

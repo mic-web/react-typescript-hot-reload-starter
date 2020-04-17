@@ -6,15 +6,18 @@
   "scripts": {
     "build": "webpack --config config/webpack.prod.js",
     "start": "webpack-dev-server --config config/webpack.dev.js",
-    "lint": "tsc --noEmit && eslint ./src/ --ext .js,.jsx,.ts,.tsx"
+    "lint": "tsc --noEmit && eslint ./src/ --ext .js,.jsx,.ts,.tsx",
+    "test": "jest --config config/jest.config.js",
+    "test:watch": "npm run test -- --watch --maxWorkers=1"
   },
   "keywords": [
-    "typescript",
-    "react",
-    "webpack",
-    "prettier",
-    "eslint",
-    "hooks"
+    "Typescript",
+    "React",
+    "Webpack",
+    "Babel",
+    "Prettier",
+    "ESLint",
+    "Material UI"
   ],
   "author": "m.adlfinger@gmx.net",
   "license": "ISC",
@@ -25,6 +28,8 @@
     "@babel/preset-env": "^7.9.5",
     "@babel/preset-react": "^7.9.4",
     "@babel/preset-typescript": "^7.9.0",
+    "@types/enzyme": "^3.10.5",
+    "@types/jest": "^25.2.1",
     "@types/material-ui": "^0.21.7",
     "@types/node": "^13.11.1",
     "@types/react": "^16.9.34",
@@ -32,8 +37,13 @@
     "@types/webpack-env": "^1.15.1",
     "@typescript-eslint/eslint-plugin": "^2.28.0",
     "@typescript-eslint/parser": "^2.28.0",
+    "babel-jest": "^25.3.0",
     "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "html-webpack-plugin": "^4.2.0",
     "css-loader": "^3.5.2",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-config-prettier": "^6.10.1",
@@ -44,23 +54,26 @@
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.1",
     "file-loader": "^6.0.0",
+    "jest": "^25.3.0",
     "prettier": "^2.0.4",
     "source-map-loader": "^0.2.4",
     "style-loader": "^1.1.4",
-    "ts-loader": "^7.0.0",
     "typescript": "^3.8.3",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3"
+    "webpack-dev-server": "^3.10.3",
+    "webpack-merge": "^4.2.2"
   },
   "dependencies": {
     "@material-ui/core": "^4.9.10",
     "@material-ui/icons": "^4.9.1",
-    "clean-webpack-plugin": "^3.0.0",
-    "html-webpack-plugin": "^4.2.0",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "typeface-roboto": "0.0.75",
-    "webpack-merge": "^4.2.2"
+    "react-dom": "^16.13.1"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/src/__mocks__/fileMock.js",
+      "\\.(css|less)$": "<rootDir>/src/__mocks__/empty_module.js"
+    }
   }
 }

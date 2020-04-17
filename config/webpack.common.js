@@ -2,12 +2,14 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
+const vars = require('./common-vars')
+
 module.exports = {
-  context: path.resolve(__dirname, '../src'),
+  context: path.resolve(__dirname, vars.srcDir),
   entry: './index.tsx',
   output: {
     filename: '[name].js',
-    path: path.resolve(__dirname, '../dist'),
+    path: path.resolve(__dirname, vars.distDir),
   },
   devtool: 'source-map',
   resolve: {

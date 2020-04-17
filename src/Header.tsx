@@ -1,13 +1,17 @@
 import React from 'react'
-import AppBar from '@material-ui/core/AppBar'
-import Toolbar from '@material-ui/core/Toolbar'
-import Typography from '@material-ui/core/Typography'
+import { AppBar, Box, Toolbar, Typography } from '@material-ui/core'
+import { BeachAccess, Pool, WbSunny } from '@material-ui/icons'
 
 export default function ButtonAppBar() {
   return (
     <AppBar position="static">
       <Toolbar>
-        <Typography variant="h6">Starter project</Typography>
+        <Box mr={1}>
+          <WbSunny />
+          <BeachAccess />
+          <Pool />
+        </Box>
+        <Typography variant="h6">Highly Customizable React Project</Typography>
       </Toolbar>
     </AppBar>
   )

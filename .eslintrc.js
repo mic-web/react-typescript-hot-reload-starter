@@ -45,6 +45,7 @@ module.exports = {
     'prettier/prettier': 'error',
     '@typescript-eslint/explicit-function-return-type': 'off',
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": ["**/*.test.*", "config/*"]}]
   },
   "overrides": [
     {

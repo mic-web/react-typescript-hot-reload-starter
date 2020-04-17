@@ -1,6 +1,6 @@
 {
   "name": "react-typescript-prettier-starter",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -19,8 +19,9 @@
     "ESLint",
     "Material UI"
   ],
-  "author": "m.adlfinger@gmx.net",
-  "license": "ISC",
+  "author": "Michael Adlfinger",
+  "license": "MIT",
+  "homepage": "https://github.com/mic-web/react-typescript-hot-reload-starter",
   "devDependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.9.0",
